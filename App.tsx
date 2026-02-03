@@ -40,11 +40,11 @@ const App: React.FC = () => {
             </div>
             <p className="text-sm text-blue-700 leading-relaxed">
               你看見左邊那一排檔案了嗎？(像是 <code>App.tsx</code>, <code>index.html</code>)。
-              這就是網頁的**零件清單**。Gemini 產出的代碼通常會分佈在這些檔案裡。
+              這就是網頁的<strong>零件清單</strong>。Gemini 產出的代碼通常會分佈在這些檔案裡。
             </p>
             <div className="bg-white/50 p-3 rounded-lg text-xs text-blue-600">
               <strong>💡 搬家教學：</strong> 
-              點擊左邊的檔名 -> 看到右邊出現代碼 -> 全選並複製 -> 到你電腦裡的 VS Code 貼上。
+              點擊左邊的檔名 → 看到右邊出現代碼 → 全選並複製 → 到你電腦裡的 VS Code 貼上。
               這就是「下載」的過程！
             </div>
           </div>
