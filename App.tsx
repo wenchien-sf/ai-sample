@@ -44,7 +44,7 @@ const App: React.FC = () => {
             </p>
             <div className="bg-white/50 p-3 rounded-lg text-xs text-blue-600">
               <strong>💡 搬家教學：</strong> 
-              點擊左邊的檔名 → 看到右邊出現代碼 → 全選並複製 → 到你電腦裡的 VS Code 貼上。
+              點擊左邊的檔名 ➜ 看到右邊出現代碼 ➜ 全選並複製 ➜ 到你電腦裡的 VS Code 貼上。
               這就是「下載」的過程！
             </div>
           </div>
@@ -102,17 +102,17 @@ const App: React.FC = () => {
             當你的代碼都成功搬到 GitHub 倉庫後，Vercel 就能讀取它們並變成網站。
           </p>
           <div className="flex flex-col md:flex-row gap-4 items-center">
-            <div className="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-100 w-full">
+            <div className="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-100 w-full text-center">
               <h4 className="font-bold text-blue-800">1. 登入 Vercel</h4>
               <p className="text-sm text-blue-700">選擇 "Continue with GitHub"。</p>
             </div>
             <ChevronRight className="hidden md:block text-slate-300" />
-            <div className="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-100 w-full">
+            <div className="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-100 w-full text-center">
               <h4 className="font-bold text-blue-800">2. Import Repo</h4>
               <p className="text-sm text-blue-700">選擇那個裝滿你剛複製代碼的儲存庫。</p>
             </div>
             <ChevronRight className="hidden md:block text-slate-300" />
-            <div className="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-100 w-full">
+            <div className="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-100 w-full text-center">
               <h4 className="font-bold text-blue-800">3. 點擊 Deploy</h4>
               <p className="text-sm text-blue-700">魔法發生的地方！</p>
             </div>

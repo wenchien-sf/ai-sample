@@ -1,10 +1,16 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const askGeminiAssistant = async (prompt: string) => {
+  const apiKey = process.env.API_KEY;
+
+  // 防呆機制：如果還沒設定 API Key，不執行初始化，避免網頁崩潰
+  if (!apiKey || apiKey === "undefined" || apiKey === "") {
+    return "💡 偵測到尚未設定 Google API Key 喔！請參考教學步驟第 4 步，在 Vercel 的 Environment Variables 中設定 API_KEY，我才能為你服務！";
+  }
+
   try {
+    const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: prompt,
@@ -24,6 +30,6 @@ export const askGeminiAssistant = async (prompt: string) => {
     return response.text;
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "哎呀，助教現在有點忙，請等一下再問我一次喔！";
+    return "哎呀，助教現在連不上線，可能是 API Key 設定有誤或是網路問題，請檢查一下喔！";
   }
 };
